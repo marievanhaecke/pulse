@@ -1,7 +1,7 @@
 import Stripe from 'stripe'
 
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-06-20',
+  apiVersion: '2024-04-10',
   typescript: true,
 })
 
@@ -34,19 +34,3 @@ export async function getOrCreateStripeCustomer(
     name,
     metadata: { supabase_user_id: userId },
   })
-
-  await supabase
-    .from('profiles')
-    .update({ stripe_customer_id: customer.id })
-    .eq('id', userId)
-
-  return customer.id
-}
-
-export function formatPrice(cents: number, currency = 'EUR'): string {
-  return new Intl.NumberFormat('fr-FR', {
-    style: 'currency',
-    currency,
-    minimumFractionDigits: 0,
-  }).format(cents / 100)
-}
