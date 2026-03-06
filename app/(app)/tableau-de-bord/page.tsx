@@ -44,7 +44,7 @@ export default async function DashboardPage() {
         .limit(5),
     ])
     activeMembership = membershipRes.data?.[0] || null
-    upcomingSessions = bookingsRes.data?.map(b => b.session).filter(Boolean) as Session[] || []
+    upcomingSessions = bookingsRes.data?.map(b => b.session).filter(Boolean) as unknown as Session[] || []
     stats = {
       reservations: bookingsRes.data?.length ?? 0,
     }
@@ -57,7 +57,7 @@ export default async function DashboardPage() {
       .eq('coach_id', user.id)
 
     const sessions = coachSessions?.map(sc => sc.session).filter(Boolean) ?? []
-    upcomingSessions = (sessions as Session[]).filter(
+    upcomingSessions = (sessions as unknown as Session[]).filter(
       (s: Session) => s.date >= today && s.status === 'scheduled'
     ).slice(0, 5)
     stats = { totalSeances: sessions.length }
