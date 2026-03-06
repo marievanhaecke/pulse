@@ -1,5 +1,5 @@
 -- ============================================================
--- SPORT MLK - Schéma Supabase
+-- SPORT Pulse - Schéma Supabase
 -- ============================================================
 
 -- Extension pour générer des UUID
@@ -127,7 +127,7 @@ create table public.settings (
 
 -- Valeurs par défaut
 insert into public.settings (key, value) values
-  ('association_name',    'MLK Sport'),
+  ('association_name',    'Pulse'),
   ('price_session_cents', '1200'),
   ('price_monthly_cents', '4500'),
   ('price_yearly_cents',  '40000'),

@@ -3,8 +3,8 @@ import { Toaster } from 'sonner'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'MLK Sport',
-  description: 'Gestion des cours et adhésions MLK Sport',
+  title: 'Pulse',
+  description: 'Gestion des cours et adhésions Pulse',
   icons: { icon: '/favicon.ico' },
 }
 

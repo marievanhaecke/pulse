@@ -58,7 +58,7 @@ export default function Sidebar({ profile }: SidebarProps) {
             <Activity className="w-5 h-5 text-white" />
           </div>
           <div>
-            <p className="font-bold text-slate-900 leading-tight">MLK Sport</p>
+            <p className="font-bold text-slate-900 leading-tight">Pulse</p>
             <p className="text-xs text-slate-400">Association sportive</p>
           </div>
         </Link>

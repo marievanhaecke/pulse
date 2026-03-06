@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
         price_data: {
           currency: 'eur',
           product_data: {
-            name: 'Adhésion MLK Sport — À la séance',
+            name: 'Adhésion Pulse — À la séance',
             description: '1 séance de sport',
           },
           unit_amount: PRICES.session,
@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
           interval: type === 'monthly' ? 'month' : 'year',
         },
         product_data: {
-          name: `Adhésion MLK Sport — ${type === 'monthly' ? 'Mensuelle' : 'Annuelle'}`,
+          name: `Adhésion Pulse — ${type === 'monthly' ? 'Mensuelle' : 'Annuelle'}`,
         },
       })
 

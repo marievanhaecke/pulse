@@ -64,7 +64,7 @@ export default function InscriptionPage() {
             <div className="w-12 h-12 bg-primary-600 rounded-2xl flex items-center justify-center">
               <Activity className="w-7 h-7 text-white" />
             </div>
-            <span className="text-2xl font-bold text-white">MLK Sport</span>
+            <span className="text-2xl font-bold text-white">Pulse</span>
           </Link>
           <p className="text-slate-400 mt-3">Rejoignez l&apos;association !</p>
         </div>
@@ -135,7 +135,7 @@ export default function InscriptionPage() {
             </div>
 
             <p className="text-xs text-slate-500">
-              En vous inscrivant, vous acceptez les conditions d&apos;utilisation de l&apos;association MLK Sport.
+              En vous inscrivant, vous acceptez les conditions d&apos;utilisation de l&apos;association Pulse.
             </p>
 
             <button type="submit" disabled={loading} className="btn-primary w-full py-2.5">

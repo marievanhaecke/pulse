@@ -41,7 +41,7 @@ export default function LoginPage() {
             <div className="w-12 h-12 bg-primary-600 rounded-2xl flex items-center justify-center">
               <Activity className="w-7 h-7 text-white" />
             </div>
-            <span className="text-2xl font-bold text-white">MLK Sport</span>
+            <span className="text-2xl font-bold text-white">Pulse</span>
           </Link>
           <p className="text-slate-400 mt-3">Bon retour parmi nous !</p>
         </div>

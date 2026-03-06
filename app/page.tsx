@@ -11,7 +11,7 @@ export default function LandingPage() {
             <div className="w-9 h-9 bg-primary-500 rounded-xl flex items-center justify-center">
               <Activity className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">MLK Sport</span>
+            <span className="text-xl font-bold text-white">Pulse</span>
           </div>
           <div className="flex items-center gap-3">
             <Link href="/login" className="text-sm text-slate-300 hover:text-white transition-colors">
@@ -36,7 +36,7 @@ export default function LandingPage() {
         </h1>
         <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
           Planning en ligne, réservations faciles, cotisations en ligne.
-          MLK Sport, c&apos;est votre association connectée.
+          Pulse, c&apos;est votre association connectée.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/inscription" className="btn-primary btn-lg group">
@@ -134,7 +134,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="border-t border-white/10 py-8 text-center">
         <p className="text-slate-500 text-sm">
-          © {new Date().getFullYear()} MLK Sport · Association sportive
+          © {new Date().getFullYear()} Pulse · Association sportive
         </p>
       </footer>
     </div>

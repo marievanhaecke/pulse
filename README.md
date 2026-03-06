@@ -1,4 +1,4 @@
-# MLK Sport — Application de gestion sportive
+# Pulse — Application de gestion sportive
 
 Application web pour gérer les cours, réservations et cotisations d'une association sportive.
 
@@ -30,7 +30,7 @@ Application web pour gérer les cours, réservations et cotisations d'une associ
 ### 1. Cloner et installer
 
 ```bash
-cd sport-mlk
+cd pulse
 npm install
 ```
 
@@ -74,7 +74,7 @@ npm run dev
 ## Structure du projet
 
 ```
-sport-mlk/
+pulse/
 ├── app/
 │   ├── (auth)/              # Login, inscription
 │   ├── (app)/               # App authentifiée
