@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
-import { addDays, format, startOfWeek, nextDay } from 'date-fns'
+import { addDays, format } from 'date-fns'
 
 export async function POST(
   req: NextRequest,

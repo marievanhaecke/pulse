@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { ChevronLeft, ChevronRight, Plus, Calendar } from 'lucide-react'
 import {
-  addWeeks, subWeeks, format, addDays, startOfWeek, isSameDay, parseISO, isToday,
+  addWeeks, subWeeks, format, addDays, startOfWeek, isToday,
 } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { createClient } from '@/lib/supabase/client'

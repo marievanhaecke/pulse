@@ -4,7 +4,7 @@ import Stripe from 'stripe'
 import { createAdminClient } from '@/lib/supabase/server'
 import { addMonths, addYears, format } from 'date-fns'
 
-export const config = { api: { bodyParser: false } }
+export const dynamic = 'force-dynamic'
 
 export async function POST(req: NextRequest) {
   const body = await req.text()
