@@ -34,3 +34,19 @@ export async function getOrCreateStripeCustomer(
     name,
     metadata: { supabase_user_id: userId },
   })
+
+  await supabase
+    .from('profiles')
+    .update({ stripe_customer_id: customer.id })
+    .eq('id', userId)
+
+  return customer.id
+}
+
+export function formatPrice(cents: number, currency = 'EUR'): string {
+  return new Intl.NumberFormat('fr-FR', {
+    style: 'currency',
+    currency,
+    minimumFractionDigits: 0,
+  }).format(cents / 100)
+}
