@@ -14,7 +14,7 @@ export async function middleware(request: NextRequest) {
         getAll() {
           return request.cookies.getAll()
         },
-        setAll(cookiesToSet) {
+        setAll(cookiesToSet: { name: string; value: string; options?: Record<string, unknown> }[]) {
           cookiesToSet.forEach(({ name, value }) =>
             request.cookies.set(name, value)
           )
@@ -34,30 +34,3 @@ export async function middleware(request: NextRequest) {
 
   if (!user && !isPublic) {
     return NextResponse.redirect(new URL('/login', request.url))
-  }
-
-  if (user && (pathname === '/login' || pathname === '/inscription')) {
-    return NextResponse.redirect(new URL('/tableau-de-bord', request.url))
-  }
-
-  // Protection des routes admin
-  if (pathname.startsWith('/admin')) {
-    const { data: profile } = await supabase
-      .from('profiles')
-      .select('role')
-      .eq('id', user!.id)
-      .single()
-
-    if (profile?.role !== 'admin') {
-      return NextResponse.redirect(new URL('/tableau-de-bord', request.url))
-    }
-  }
-
-  return supabaseResponse
-}
-
-export const config = {
-  matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
-  ],
-}
