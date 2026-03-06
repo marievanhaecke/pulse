@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import UsersClient from './users-client'
-import type { Profile } from '@/types/database'
+import type { Profile, Membership } from '@/types/database'
 
 export default async function AdminUsersPage() {
   const supabase = createClient()
@@ -19,5 +19,5 @@ export default async function AdminUsersPage() {
     `)
     .order('created_at', { ascending: false })
 
-  return <UsersClient users={(users || []) as (Profile & { memberships: unknown[] })[]} />
+  return <UsersClient users={(users || []) as (Profile & { memberships: Partial<Membership>[] })[]} />
 }
