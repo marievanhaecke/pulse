@@ -24,7 +24,7 @@ export default async function AdminSessionsPage() {
       .order('date')
       .order('start_time')
       .limit(100),
-    supabase.from('profiles').select('id, full_name').eq('role', 'coach'),
+    supabase.from('profiles').select('id, full_name, role').eq('role', 'coach'),
   ])
 
   return (
